@@ -10,12 +10,7 @@ public class JpaMain {
         EntityTransaction tx = em.getTransaction();
         tx.begin();
         try{
-            //영속
-            Member member = new Member(200L, "member200");
-            em.persist(member);
-            em.flush();
 
-            System.out.println("==========");
             tx.commit();
         } catch (Exception e) {
             tx.rollback();
